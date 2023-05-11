@@ -9,7 +9,7 @@ router.get("/",  productController.getAllProduct);
 // create
 router.post("/", protect, upload.single('photo'), productController.createProduct);
 // memanggil data secara spesifik sesuai id
-router.get("/:id", protect, productController.getDetailProduct);
+router.get("/:id", productController.getDetailProduct);
 // update
 router.put("/:id", protect, upload.single('photo'), productController.updateProduct);
 // delete
